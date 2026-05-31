@@ -117,9 +117,6 @@ func (s *MaterialServiceServer) Create(ctx context.Context, in *materialsPb.Mate
 	if in.GetSubjectClassId() == "" {
 		return nil, status.Error(codes.InvalidArgument, "subject_class_id is required")
 	}
-	if in.GetTopicSubjectId() == "" {
-		return nil, status.Error(codes.InvalidArgument, "topic_subject_id is required")
-	}
 	if in.GetType() == "" {
 		return nil, status.Error(codes.InvalidArgument, "type is required")
 	}
